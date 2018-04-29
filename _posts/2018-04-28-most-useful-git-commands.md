@@ -20,6 +20,7 @@ open graphical repository browser
 gitk
 </b>
 commands to view, commit and push changes
+
 <b>
 git status 
  
@@ -45,39 +46,71 @@ list all remote branches
 <b>
 git branch -r
 </b>
+
 stash and unstash changes
 
+<b>
 git stash
+ 
 git stash pop
+</b>
 
 to revert a commit
 
+<b>
 git reset --soft HEAD~
+</b>
 
 to unstage a staged file
 
+<b>
 git reset HEAD filename
+</b>
 
 search tags with regex
+
+<b>
 git tag --list 'Release2018*'
+ </b>
  
 checkout multiple files
+
+<b>
 git checkout -- '*.xml'
+ </b>
 
 show diff between two tags
+
+<b>
 git diff tag1 tag2 --stat
+ </b>
  
 checkout existing tag into new branch Release0110
+
+<b>
 git checkout tags/Release20180110 -b Release0110
+ </b>
  
 revert changes to your working copy
+
+<b>
 git checkout .
+ </b>
  
 revert a change that you have committed
+
+<b>
 git revert <commit 1> <commit 2>
+ </b>
  
 delete local branch
+
+<b>
 git branch -d branchname
+ </b>
  
 delete remote branch
+
+<b>
 git push origin --delete branchname
+</b>
