@@ -15,26 +15,36 @@ git add **/pom.xml
 </b>
 
 open graphical repository browser
+
 <b>
 gitk
 </b>
 commands to view, commit and push changes
-
+<b>
 git status 
+ 
 git commit -a -m "add some comment"
+
 git push origin feature/branch_name
+</b>
 
 steps to update  your branch with master
 
+<b>
 git checkout master;
+ 
 git pull;
+
 git checkout branch
+
 git merge --no-ff master
+</b>
  
 list all remote branches
 
+<b>
 git branch -r
-
+</b>
 stash and unstash changes
 
 git stash
