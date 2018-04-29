@@ -5,7 +5,7 @@ date: 2018-04-28
 ---
 
 ## Here are some git commands that are used most often
-'''
+
 ### add all the files or certain files
 
 
@@ -57,15 +57,15 @@ date: 2018-04-28
 
 ### search tags with regex
 
-- git tag --list 'Release2018*'
+- ''' git tag --list 'Release2018*' '''
  
 ### checkout multiple files
 
-- git checkout -- '*.xml'
+- ''' git checkout -- '*.xml' '''
 
 ### show diff between two tags
 
-- git diff tag1 tag2 --stat
+- ''' git diff tag1 tag2 --stat '''
  
 ### checkout existing tag into new branch Release0110
 
@@ -86,4 +86,3 @@ date: 2018-04-28
 ### delete remote branch
 
 - git push origin --delete branchname
-'''
