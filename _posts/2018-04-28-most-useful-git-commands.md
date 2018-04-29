@@ -2,7 +2,7 @@
 layout: post
 title: "Most Useful Git Commands "
 date: 2018-04-28
----
+
 
 #<strong>Git commands that are used most often</strong>
 
@@ -115,3 +115,4 @@ delete remote branch
 <b>
 git push origin --delete branchname
 </b>
+---
