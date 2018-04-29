@@ -7,6 +7,7 @@ date: 2018-04-28
 <strong>Git commands that are used most often</strong>
 
 add all the files or certain files
+
 <b>
 git add --all
  
