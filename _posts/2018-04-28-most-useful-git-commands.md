@@ -5,6 +5,7 @@ date: 2018-04-28
 ---
 
 Git commands that are used most often
+
 add all the files or certain files
 git add --all
 git add **/pom.xml
@@ -45,8 +46,8 @@ git checkout -- '*.xml'
 show diff between two tags
 git diff tag1 tag2 --stat
  
-checkout existing tag into new branch Release_01_10
-git checkout tags/Release2018_01_10 -b Release_01_10
+checkout existing tag into new branch Release0110
+git checkout tags/Release20180110 -b Release0110
  
 revert changes to your working copy
 git checkout .
