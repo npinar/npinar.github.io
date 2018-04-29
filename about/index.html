@@ -1,0 +1,85 @@
+<p>Git commands that are used most often</p>
+<div>
+<pre><code>add all the files or certain files</code></pre>
+</div>
+<p>git add --all</p>
+<p>git add **/pom.xml</p>
+<div>
+<pre><code>open graphical repository browser</code></pre>
+</div>
+<p>&nbsp; gitk</p>
+<div>
+<pre><code>commands to view, commit and push changes</code></pre>
+</div>
+<p>git status&nbsp;</p>
+<p>git commit -a -m "add some comment"</p>
+<p>git push origin feature/branch_name</p>
+<p>&nbsp;</p>
+<div>
+<pre><code>steps to update  your branch with master</code></pre>
+</div>
+<p>git checkout master;</p>
+<p>git pull;</p>
+<p>git checkout branch</p>
+<p>git merge --no-ff master</p>
+<p>&nbsp;</p>
+<div>
+<pre><code>list all remote branches</code></pre>
+</div>
+<p>git branch -r</p>
+<p>&nbsp;</p>
+<div>
+<pre><code>stash and unstash changes</code></pre>
+</div>
+<p>git stash</p>
+<p>git stash pop</p>
+<p>&nbsp;</p>
+<div>
+<pre><code>to revert a commit</code></pre>
+</div>
+<p>git reset --soft HEAD~</p>
+<p>&nbsp;</p>
+<div>
+<pre><code>to unstage a staged file</code></pre>
+</div>
+<p>git reset HEAD filename</p>
+<p>&nbsp;</p>
+<div>
+<pre><code>search tags with regex</code></pre>
+</div>
+<p>git tag --list 'Release2018*'</p>
+<p>&nbsp;</p>
+<div>
+<pre><code>checkout multiple files</code></pre>
+</div>
+<p>git checkout -- '*.xml'</p>
+<p>&nbsp;</p>
+<div>
+<pre><code>show diff between two tags</code></pre>
+</div>
+<p>git diff tag1 tag2 --stat</p>
+<p>&nbsp;</p>
+<div>
+<pre><code>checkout existing tag into new branch Release_01_10</code></pre>
+</div>
+<p>git checkout tags/Release2018_01_10 -b Release_01_10</p>
+<p>&nbsp;</p>
+<div>
+<pre><code>revert changes to your working copy</code></pre>
+</div>
+<p>git checkout .</p>
+<p>&nbsp;</p>
+<div>
+<pre><code>revert a change that you have committed</code></pre>
+</div>
+<p>git revert &lt;commit 1&gt; &lt;commit 2&gt;</p>
+<p>&nbsp;</p>
+<div>
+<pre><code>delete local branch</code></pre>
+</div>
+<p>git branch -d branchname</p>
+<p>&nbsp;</p>
+<div>
+<pre><code>delete remote branch</code></pre>
+</div>
+<p>git push origin --delete branchname</p>
