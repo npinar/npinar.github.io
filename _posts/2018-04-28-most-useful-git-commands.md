@@ -30,25 +30,24 @@ date: 2018-04-28
 ### steps to update  your branch with master
 
 > git checkout master;
+
 > git pull;
+
 > git checkout branch
+
 > git merge --no-ff master
  
-list all remote branches
+### list all remote branches
 
-<b>
-git branch -r
-</b>
+- git branch -r
 
-stash and unstash changes
+### stash and unstash changes
 
-<b>
-git stash
+- git stash
  
-git stash pop
-</b>
+- git stash pop
 
-to revert a commit
+### to revert a commit
 
 <b>
 git reset --soft HEAD~
