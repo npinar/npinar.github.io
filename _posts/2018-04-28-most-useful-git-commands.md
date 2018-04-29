@@ -8,9 +8,9 @@ date: 2018-04-28
 
 ### add all the files or certain files
 
-###### git add --all
+##### git add --all
  
-###### git add **/pom.xml
+##### git add **/pom.xml
 
 ### open graphical repository browser
 
