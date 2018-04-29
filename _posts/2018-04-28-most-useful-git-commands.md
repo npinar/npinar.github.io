@@ -29,13 +29,13 @@ date: 2018-04-28
 
 ### steps to update  your branch with master
 
-> git checkout master;
+- git checkout master;
 
-> git pull;
+- git pull;
 
-> git checkout branch
+- git checkout branch
 
-> git merge --no-ff master
+- git merge --no-ff master
  
 ### list all remote branches
 
@@ -49,7 +49,7 @@ date: 2018-04-28
 
 ### to revert a commit
 
-- git reset --soft HEAD\~ 
+- git reset --soft HEAD~ 
 
 ### to unstage a staged file
 
@@ -57,7 +57,7 @@ date: 2018-04-28
 
 ### search tags with regex
 
--  git tag --list 'Release2018\*'
+-  git tag --list 'Release2018*'
  
 ### checkout multiple files
 
