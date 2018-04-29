@@ -4,7 +4,7 @@ title: "Most Useful Git Commands "
 date: 2018-04-28
 ---
 
-Git commands that are used most often
+<strong>Git commands that are used most often</strong>
 
 add all the files or certain files
 
