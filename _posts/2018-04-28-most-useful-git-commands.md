@@ -1,9 +1,17 @@
+---
+layout: post
+title: "Most Useful Git Commands "
+date: 2018-04-28
+---
+
 Git commands that are used most often
 add all the files or certain files
 git add --all
 git add **/pom.xml
+
 open graphical repository browser
-  gitk
+gitk
+
 commands to view, commit and push changes
 git status 
 git commit -a -m "add some comment"
