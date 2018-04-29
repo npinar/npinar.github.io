@@ -8,11 +8,11 @@ date: 2018-04-28
 
 add all the files or certain files
 
-<b>
+
 git add --all
  
 git add **/pom.xml
-</b>
+
 
 open graphical repository browser
 
