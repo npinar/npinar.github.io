@@ -49,60 +49,40 @@ date: 2018-04-28
 
 ### to revert a commit
 
-<b>
-git reset --soft HEAD~
-</b>
+- git reset --soft HEAD~
 
-to unstage a staged file
+### to unstage a staged file
 
-<b>
-git reset HEAD filename
-</b>
+- git reset HEAD filename
 
-search tags with regex
+### search tags with regex
 
-<b>
-git tag --list 'Release2018*'
- </b>
+- git tag --list 'Release2018*'
  
-checkout multiple files
+### checkout multiple files
 
-<b>
-git checkout -- '*.xml'
- </b>
+- git checkout -- '*.xml'
 
-show diff between two tags
+### show diff between two tags
 
-<b>
-git diff tag1 tag2 --stat
- </b>
+- git diff tag1 tag2 --stat
  
-checkout existing tag into new branch Release0110
+### checkout existing tag into new branch Release0110
 
-<b>
-git checkout tags/Release20180110 -b Release0110
- </b>
+- git checkout tags/Release20180110 -b Release0110
  
-revert changes to your working copy
+### revert changes to your working copy
 
-<b>
-git checkout .
- </b>
+- git checkout .
  
-revert a change that you have committed
+### revert a change that you have committed
 
-<b>
-git revert <commit 1> <commit 2>
- </b>
+- git revert <commit 1> <commit 2>
  
-delete local branch
+### delete local branch
 
-<b>
-git branch -d branchname
- </b>
+- git branch -d branchname
  
-delete remote branch
+### delete remote branch
 
-<b>
-git push origin --delete branchname
-</b>
+- git push origin --delete branchname
