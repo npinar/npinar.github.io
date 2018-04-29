@@ -22,13 +22,12 @@ gitk
 
 ### commands to view, commit and push changes
 
-<b>
-git status 
+> git status 
  
-git commit -a -m "add some comment"
+> git commit -a -m "add some comment"
 
-git push origin feature/branch_name
-</b>
+> git push origin feature/branch_name
+
 
 steps to update  your branch with master
 
