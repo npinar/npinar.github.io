@@ -4,9 +4,9 @@ title: "Most Useful Git Commands "
 date: 2018-04-28
 ---
 
-# Here are some git commands that are used most often
+## Here are some git commands that are used most often
 
-## add all the files or certain files
+### add all the files or certain files
 
 
 git add --all
@@ -14,7 +14,7 @@ git add --all
 git add **/pom.xml
 
 
-## open graphical repository browser
+### open graphical repository browser
 
 <b>
 gitk
