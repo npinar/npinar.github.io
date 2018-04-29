@@ -8,11 +8,9 @@ date: 2018-04-28
 
 ### add all the files or certain files
 
-
 - git add --all
  
 - git add **/pom.xml
-
 
 ### open graphical repository browser
 
@@ -25,7 +23,6 @@ date: 2018-04-28
 - git commit -a -m "add some comment"
 
 - git push origin feature/branch_name
-
 
 ### steps to update  your branch with master
 
