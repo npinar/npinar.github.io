@@ -49,7 +49,7 @@ date: 2018-04-28
 
 ### to revert a commit
 
-- ''' git reset --soft HEAD~ '''
+- git reset --soft HEAD\~ 
 
 ### to unstage a staged file
 
@@ -57,15 +57,15 @@ date: 2018-04-28
 
 ### search tags with regex
 
-- ''' git tag --list 'Release2018*' '''
+-  git tag --list 'Release2018\*'
  
 ### checkout multiple files
 
-- ''' git checkout -- '*.xml' '''
+-  git checkout -- '*.xml' 
 
 ### show diff between two tags
 
-- ''' git diff tag1 tag2 --stat '''
+- git diff tag1 tag2 --stat 
  
 ### checkout existing tag into new branch Release0110
 
