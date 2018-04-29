@@ -19,6 +19,7 @@ open graphical repository browser
 <b>
 gitk
 </b>
+
 commands to view, commit and push changes
 
 <b>
