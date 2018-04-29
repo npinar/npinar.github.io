@@ -5,7 +5,7 @@ date: 2018-04-28
 ---
 
 ## Here are some git commands that are used most often
-
+'''
 ### add all the files or certain files
 
 
@@ -86,3 +86,4 @@ date: 2018-04-28
 ### delete remote branch
 
 - git push origin --delete branchname
+'''
