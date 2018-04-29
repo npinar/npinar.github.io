@@ -16,28 +16,23 @@ date: 2018-04-28
 
 ### open graphical repository browser
 
-> gitk
+- gitk
 
 ### commands to view, commit and push changes
 
-> git status 
+- git status 
  
-> git commit -a -m "add some comment"
+- git commit -a -m "add some comment"
 
-> git push origin feature/branch_name
+- git push origin feature/branch_name
 
 
-steps to update  your branch with master
+### steps to update  your branch with master
 
-<b>
-git checkout master;
- 
-git pull;
-
-git checkout branch
-
-git merge --no-ff master
-</b>
+> git checkout master;
+> git pull;
+> git checkout branch
+> git merge --no-ff master
  
 list all remote branches
 
