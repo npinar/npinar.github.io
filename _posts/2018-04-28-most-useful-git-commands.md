@@ -8,7 +8,7 @@ date: 2018-04-28
 
 ### add all the files or certain files
 
-- git add --all
+- ###### git add --all
  
 - git add **/pom.xml
 
@@ -46,7 +46,7 @@ date: 2018-04-28
 
 ### to revert a commit
 
-- git reset --soft HEAD~ 
+- ###### git reset --soft HEAD~ 
 
 ### to unstage a staged file
 
