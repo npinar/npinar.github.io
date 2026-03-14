@@ -1,1 +1,0 @@
-# npinar.github.io
