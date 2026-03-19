@@ -901,58 +901,7 @@
   const data = await res.json();
   return data.reply;
   }
-  // async function callChatAPI(message, history) {
-  // const res = await fetch('https://84a8kdwkh2.execute-api.us-east-1.amazonaws.com/dev/chat', {
-  //   method: 'POST',
-  //   headers: { 'Content-Type': 'application/json' },
-  //   body: JSON.stringify({ message, history })
-  // });
-  // const data = await res.json();
-  // return data.reply;
-  // }
-  // Mock API — replace the body of this function with a real fetch() when Lambda is ready
-  // async function callChatAPI(message, history) {
-  //   // TODO: Replace with real API Gateway call:
-  //   // const res = await fetch('https://YOUR_API_GATEWAY_URL/chat', {
-  //   //   method: 'POST',
-  //   //   headers: { 'Content-Type': 'application/json' },
-  //   //   body: JSON.stringify({ message, history })
-  //   // });
-  //   // const data = await res.json();
-  //   // return data.reply;
-
-  //   // ── MOCK RESPONSES ──
-  //   await new Promise(r => setTimeout(r, 900 + Math.random() * 600));
-
-  //   const q = message.toLowerCase();
-
-  //   if (q.includes('aws') || q.includes('certif')) {
-  //     return "Nevzat holds four AWS certifications: **Solutions Architect**, **Developer**, **AI Practitioner**, and the prestigious **Machine Learning – Specialty**. These reflect his deep commitment to cloud-native and AI-driven development.";
-  //   }
-  //   if (q.includes('fiserv')) {
-  //     return "At Fiserv, Nevzat worked as both a Software Developer (2006–2010) and later as a Sr. Lead Software Developer (2012–2018). His work spanned Genesys Agent Desktop development, security compliance audits, integration testing frameworks, and mentoring developers on security best practices.";
-  //   }
-  //   if (q.includes('experience') || q.includes('years')) {
-  //     return "Nevzat has over **20 years** of software engineering experience. His career spans roles at Fiserv, JCPenney, and his current position as Sr. Lead Software Engineer at JPMorgan Chase, where he has been since 2018.";
-  //   }
-  //   if (q.includes('tech') || q.includes('skill') || q.includes('stack')) {
-  //     return "Nevzat's core stack includes **Java, Spring Boot, J2EE, Hibernate**, and **SOAP/REST services**. On the cloud side, he works extensively with **AWS** services. He's also experienced with **Kubernetes, ReactJS, Python**, and actively building with **LLMs and RAG architectures**.";
-  //   }
-  //   if (q.includes('ai') || q.includes('ml') || q.includes('project')) {
-  //     return "Nevzat has built several AI projects including: a **career chatbot** (this one!), an **AI Hangman game** using GPT-4o, a **Quiz Generator with RAG** using FAISS and SentenceTransformers, and an **Investment Calculator**. He's actively expanding into LLM-powered agentic applications.";
-  //   }
-  //   if (q.includes('open') || q.includes('opportunit') || q.includes('hire') || q.includes('job')) {
-  //     return "That's a great question to ask directly! I'd encourage you to connect with Nevzat on LinkedIn at **linkedin.com/in/nevzatpinar** — or share your email here and I'll make sure he gets a note to follow up with you.";
-  //   }
-  //   if (q.includes('jcpenney') || q.includes('jcp')) {
-  //     return "At JCPenney (2010–2012), Nevzat built a **Java-based authentication library** for third-party integrations, developed a **batch reporting system**, and architected an **enterprise email platform** designed to be vendor-agnostic and highly scalable.";
-  //   }
-  //   if (q.includes('education') || q.includes('degree') || q.includes('school') || q.includes('university')) {
-  //     return "Nevzat holds a **B.S. in Computer Science & Engineering** from the **University of Texas at Arlington**, where he received multiple academic and research-based scholarships.";
-  //   }
-
-  //   return "That's a great question! While I'm running in mock mode right now, once connected to the live AI backend I'll be able to give you a detailed, personalized answer about Nevzat's background. In the meantime, feel free to check his **LinkedIn** profile or browse the Projects tab!";
-  // }
+  
 
   function getTime() {
     return new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
