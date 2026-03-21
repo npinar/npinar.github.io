@@ -884,10 +884,25 @@
     document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
     document.getElementById('tab-'+name).classList.add('active');
     btn.classList.add('active');
+
+    if (name === 'chat') {
+      warmupLambda();
+    }
   }
 
   // ─── CHAT LOGIC ───────────────────────────────────────────────
   const chatHistory = [];
+
+function warmupLambda() {
+    fetch('https://84a8kdwkh2.execute-api.us-east-1.amazonaws.com/prod/chat', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': 'GKnPlBbMT47fx682L1D2W7Jc4ShPo4w91BIagQN4'
+      },
+      body: JSON.stringify({ message: '__warmup__', history: [] })
+    }).catch(() => {});
+  }
 
   async function callChatAPI(message, history) {
   const res = await fetch('https://84a8kdwkh2.execute-api.us-east-1.amazonaws.com/prod/chat', {
