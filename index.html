@@ -90,10 +90,40 @@
     white-space: nowrap;
   }
   nav button:hover { color: var(--accent); background: rgba(21,101,192,0.06); }
-  nav button.active {
+  nav button.active:not(.nav-ai) {
     background: linear-gradient(135deg, rgba(21,101,192,0.12), rgba(124,58,237,0.08));
     color: var(--accent);
     border: 1px solid rgba(21,101,192,0.25);
+  }
+
+nav button.nav-ai {
+    color: var(--accent2);
+    border: 1px solid transparent;
+    background: none;
+    position: relative;
+  }
+
+  nav button.nav-ai::after {
+    content: '';
+    position: absolute;
+    top: 6px; right: 6px;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: #22c55e;
+    animation: pulse-ai 2s ease-in-out infinite;
+  }
+  @keyframes pulse-ai {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.7); }
+  }
+  nav button.nav-ai:hover {
+    background: rgba(124,58,237,0.12);
+    color: var(--accent2);
+  }
+  nav button.nav-ai.active {
+    background: linear-gradient(135deg, rgba(124,58,237,0.15), rgba(21,101,192,0.08));
+    color: var(--accent2);
+    border: 1px solid rgba(124,58,237,0.35);
   }
 
   main {
@@ -118,10 +148,10 @@
     grid-template-columns: auto 1fr;
     gap: 48px;
     align-items: center;
-    margin-bottom: 56px;
+    margin-bottom: 32px;
   }
 
-  .avatar {
+.avatar {
     width: 160px; height: 160px;
     border-radius: 50%;
     background: linear-gradient(135deg, #1565c0, #7c3aed);
@@ -129,6 +159,7 @@
     font-size: 4em; flex-shrink: 0;
     box-shadow: 0 8px 32px rgba(21,101,192,0.22);
     border: 3px solid #fff;
+    overflow: hidden;
   }
 
   .hero-text h1 {
@@ -147,8 +178,8 @@
     padding: 12px 22px; border-radius: 8px; text-decoration: none;
     font-size: 0.9em; font-weight: 500; transition: all 0.2s; border: 1px solid;
   }
-  .btn-linkedin { background: rgba(0,119,181,0.07); border-color: rgba(0,119,181,0.28); color: #0077b5; }
-  .btn-github   { background: rgba(0,0,0,0.04); border-color: rgba(0,0,0,0.13); color: #333; }
+  .btn-linkedin { background: #0077b5; border-color: #0077b5; color: #fff; }
+  .btn-github   { background: #24292e; border-color: #24292e; color: #fff; }
   .social-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px var(--shadow); }
 
   .about-bio {
@@ -617,8 +648,8 @@
   <nav>
     <button class="active" onclick="showTab('about', this)">👋 About Me</button>
     <button onclick="showTab('projects', this)">🚀 Projects</button>
-    <button onclick="showTab('explore', this)">🔍 Explore</button>
-    <button onclick="showTab('chat', this)">🤖 Ask Nevzat</button>
+    
+    <button class="nav-ai" onclick="showTab('chat', this)">🤖 Ask Nevzat</button>
     <button onclick="showTab('contact', this)">📞 Contact</button>
   </nav>
 </header>
@@ -628,10 +659,12 @@
   <!-- ABOUT -->
   <div id="tab-about" class="tab-panel active">
     <div class="about-hero">
-      <div class="avatar">👨‍💻</div>
+      <div class="avatar">
+        <img src="assets/nevzat.jpg" alt="Nevzat Pinar" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+      </div>
       <div class="hero-text">
         <h1>Nevzat <em>Pinar</em></h1>
-        <p class="hero-subtitle">Senior Lead Software Engineer · Full Stack Java Cloud Developer - AWS Certified</p>
+        <p class="hero-subtitle">Senior Lead Software Engineer · Full Stack Java · AWS Certified · Currently building with AI & LLMs</p>
         <div class="social-links">
           <a href="https://www.linkedin.com/in/nevzatpinar/" target="_blank" class="social-btn btn-linkedin">💼 LinkedIn</a>
           <a href="https://github.com/npinar" target="_blank" class="social-btn btn-github">🐱 GitHub</a>
@@ -640,17 +673,17 @@
     </div>
     <div class="about-bio">
       <h3>About Me</h3>
-      <p>I'm a passionate software engineer with over <strong>20 years of experience</strong> in software development and agile practices. I love solving complex problems, building impactful applications, and sharing my knowledge to empower others.</p>
-      <p>My journey began with a <strong>B.S. in Computer Science & Engineering</strong> from the <strong>University of Texas at Arlington</strong>, where I received multiple academic and research-based scholarships. Since then, I've built a strong foundation in designing and developing secure, scalable, and high-quality software solutions.</p>
-      <p>Starting as a <strong>Java developer</strong>, I delivered enterprise-grade applications using Java, J2EE, Spring, Hibernate, and SOAP services — setting the stage for my transition into modern <strong>cloud-native</strong> and <strong>AI-driven development</strong>.</p>
-      <p>Over the years, my role has evolved beyond coding. I've led cross-functional teams, mentored developers, and collaborated closely with stakeholders to turn complex requirements into actionable, value-driven solutions.</p>
+      <p>I've spent <strong>20+ years</strong> building enterprise-grade systems at companies like <strong>JPMorgan Chase</strong> and <strong>Fiserv</strong> — and the last few years pushing hard into AI, LLMs, and cloud-native architecture. I love solving problems that actually matter and sharing what I learn along the way.</p>
+      <p>My journey began with a <strong>B.S. in Computer Science & Engineering</strong> from the <strong>University of Texas at Arlington</strong>, where I received multiple academic and research-based scholarships — including the National Science Foundation scholarship. Since then I've built a strong foundation in designing and delivering secure, scalable, high-quality software solutions.</p>
+      <p>Starting as a <strong>Java developer</strong>, I delivered enterprise-grade applications using Java, J2EE, Spring, Hibernate, and SOAP services — setting the stage for my transition into modern <strong>cloud-native</strong> and <strong>AI-driven development</strong>. Along the way I've led teams of 5–6 engineers, reduced infrastructure costs by over 30%, and driven SDLC modernization across large organizations.</p>
+      <p>My role has evolved well beyond coding. I collaborate closely with stakeholders across all levels, mentor developers, and turn complex requirements into actionable, value-driven solutions.</p>
       <h3 style="margin-top:28px;">My Recent Focus Areas</h3>
-      <ul>
-        <li><strong>LLMs and Agentic AI</strong> – Actively learning and building with large language models and autonomous agent frameworks.</li>
-        <li><strong>Cloud-native development</strong> – Architecting resilient, scalable systems using AWS, Kubernetes, and ReactJS.</li>
-        <li><strong>AI & ML engineering</strong> – Backed by multiple AWS certifications:</li>
+     <ul>
+        <li><strong>LLMs and Agentic AI</strong> – Actively building with large language models, RAG pipelines, and autonomous agent frameworks.</li>
+        <li><strong>Cloud-native development</strong> – Architecting resilient, serverless systems on AWS using Lambda, API Gateway, S3, and Kubernetes.</li>
       </ul>
-      <div style="margin:14px 0 0 20px;">
+      <p style="margin:12px 0 4px 0; font-size:0.9em; color:var(--text-muted);">Backed by 4 AWS certifications spanning cloud, AI, and ML:</p>
+      <div style="margin:0;">
         <span class="cert-badge">🏅 AWS ML – Specialty</span>
         <span class="cert-badge">🏅 AWS AI Practitioner</span>
         <span class="cert-badge">🏅 AWS Developer</span>
@@ -658,33 +691,19 @@
       </div>
       <h3 style="margin-top:28px;">What Drives Me</h3>
       <ul>
-        <li>Building deep technical proofs of concept</li>
-        <li>Continuously learning to improve my craft</li>
-        <li>Coaching teams to deliver secure, reliable software</li>
-        <li>Championing agile principles and practices</li>
+        <li>Building AI-powered tools that actually ship — like this chatbot running on AWS Lambda for $0.40/month</li>
+        <li>Coaching and mentoring engineers to deliver secure, reliable software</li>
+        <li>Continuously learning and pushing into new technology frontiers</li>
+        <li>Championing agile principles and engineering excellence</li>
       </ul>
-      <p style="margin-top:14px;">I thrive in fast-paced, dynamic environments where I can help teams unlock their potential and deliver solutions that truly make a difference.</p>
+      <p style="margin-top:14px;">I thrive in fast-paced environments where I can help teams unlock their potential and deliver solutions that make a real difference. Curious about my work? Chat with my AI assistant or connect on LinkedIn.</p>
     </div>
-  </div>
+    </div>
 
-  <!-- PROJECTS -->
+<!-- PROJECTS -->
   <div id="tab-projects" class="tab-panel">
     <div class="section-header">
-      <h2>My <span>AI Projects</span></h2>
-      <p>Explore my latest work in artificial intelligence and machine learning</p>
-    </div>
-    <div class="projects-grid" id="all-projects-grid"></div>
-    <div style="text-align:center;margin-top:48px;">
-      <a href="https://github.com/npinar" target="_blank" class="social-btn btn-github" style="display:inline-flex;padding:16px 32px;border-radius:25px;font-size:1em;">
-        🔍 View All on GitHub
-      </a>
-    </div>
-  </div>
-
-  <!-- EXPLORE -->
-  <div id="tab-explore" class="tab-panel">
-    <div class="section-header">
-      <h2>Find <span>Projects</span></h2>
+      <h2>My <span>Projects</span></h2>
       <p>Search and filter by interest area</p>
     </div>
     <div class="explore-controls">
@@ -697,6 +716,11 @@
     </div>
     <div class="results-count" id="results-count"></div>
     <div class="projects-grid" id="filtered-projects-grid"></div>
+    <div style="text-align:center;margin-top:48px;">
+      <a href="https://github.com/npinar" target="_blank" class="social-btn btn-github" style="display:inline-flex;padding:16px 32px;border-radius:25px;font-size:1em;">
+        🔍 View All on GitHub
+      </a>
+    </div>
   </div>
 
   <!-- CHAT -->
@@ -804,15 +828,15 @@
       <p>Interested in full-stack development, AI integration, or cloud architecture? I'm always eager to share knowledge, discuss technical solutions, and explore how we can leverage technology to solve real-world problems.</p>
       <p>Have questions? Don't hesitate to reach out!</p>
       <div class="contact-cards">
-        <a href="https://www.linkedin.com/in/nevzatpinar/" target="_blank" class="contact-card">
+        <a href="https://www.linkedin.com/in/nevzatpinar/" target="_blank" class="contact-card" style="background:#0077b5;border-color:#0077b5;">
           <div class="icon">💼</div>
-          <div class="label">LinkedIn</div>
-          <div class="sublabel">Connect with me</div>
+          <div class="label" style="color:#fff;">LinkedIn</div>
+          <div class="sublabel" style="color:rgba(255,255,255,0.75);">Connect with me</div>
         </a>
-        <a href="https://github.com/npinar" target="_blank" class="contact-card">
+        <a href="https://github.com/npinar" target="_blank" class="contact-card" style="background:#24292e;border-color:#24292e;">
           <div class="icon">🐱</div>
-          <div class="label">GitHub</div>
-          <div class="sublabel">See my code</div>
+          <div class="label" style="color:#fff;">GitHub</div>
+          <div class="sublabel" style="color:rgba(255,255,255,0.75);">See my code</div>
         </a>
       </div>
       <div class="quote-block">
@@ -824,7 +848,7 @@
 
 </main>
 
-<footer>© 2025 Nevzat Pinar · Built with ❤️ · Hosted on GitHub Pages</footer>
+<footer>© 2026 Nevzat Pinar · Built with ❤️ · Hosted on GitHub Pages</footer>
 
 <script>
   // ─── PROJECTS DATA ───────────────────────────────────────────
@@ -852,7 +876,6 @@
     </div>`;
   }
 
-  document.getElementById('all-projects-grid').innerHTML = PROJECTS.map(renderCard).join('');
 
   const allTags = [...new Set(PROJECTS.flatMap(p => p.tags))].sort();
   const tagFiltersEl = document.getElementById('tag-filters');
