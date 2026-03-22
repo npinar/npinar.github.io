@@ -1,0 +1,52 @@
+<div class="chat-layout">
+  <div class="chat-container">
+    <div class="chat-header">
+      <div class="chat-avatar">🤖</div>
+      <div class="chat-header-info">
+        <div class="chat-header-name">Nevzat's AI Assistant</div>
+        <div class="chat-header-status">
+          <span class="status-dot"></span>
+          Online · Powered by GPT-4o-mini · Hosted on AWS Lambda
+        </div>
+      </div>
+    </div>
+    <div class="chat-messages" id="chat-messages">
+      <div class="message bot">
+        <div class="msg-avatar">🤖</div>
+        <div>
+          <div class="msg-bubble">
+            👋 Hi there! I'm Nevzat's AI assistant. I'm here to answer questions about his career, technical skills, projects, and professional background.<br><br>
+            Feel free to ask me anything — whether you're a recruiter, a developer, or just curious about his journey!
+          </div>
+          <div class="msg-time">Just now</div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-input-area">
+      <textarea class="chat-input" id="chat-input" placeholder="Ask about Nevzat's experience, skills, or projects..." rows="1" onkeydown="handleKey(event)" oninput="autoResize(this)"></textarea>
+      <button class="send-btn" id="send-btn" onclick="sendMessage()" title="Send message">➤</button>
+    </div>
+  </div>
+  <div class="chat-sidebar">
+    <div class="chat-info-card">
+      <h4>💡 Suggested Questions</h4>
+      <div class="suggested-questions">
+        <button class="suggested-q" onclick="askSuggested(this)">What technologies does Nevzat specialize in?</button>
+        <button class="suggested-q" onclick="askSuggested(this)">Tell me about his AWS certifications.</button>
+        <button class="suggested-q" onclick="askSuggested(this)">What projects has he worked on?</button>
+        <button class="suggested-q" onclick="askSuggested(this)">How many years of experience does he have?</button>
+        <button class="suggested-q" onclick="askSuggested(this)">Is Nevzat open to new opportunities?</button>
+        <button class="suggested-q" onclick="askSuggested(this)">How does this AI chatbot work?</button>
+      </div>
+    </div>
+    <div class="chat-info-card">
+      <h4>📬 Want to Connect?</h4>
+      <p style="font-size:0.85em;color:var(--text-muted);line-height:1.6;margin-bottom:14px;">
+        Mention your email in the chat and I'll make sure Nevzat gets a note to follow up with you directly.
+      </p>
+      <a href="https://www.linkedin.com/in/nevzatpinar/" target="_blank" class="social-btn btn-linkedin" style="font-size:0.85em;padding:10px 16px;justify-content:center;">
+        💼 Connect on LinkedIn
+      </a>
+    </div>
+  </div>
+</div>
