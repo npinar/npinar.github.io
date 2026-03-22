@@ -347,7 +347,7 @@ nav button.nav-ai {
     box-shadow: 0 4px 24px var(--shadow);
     display: flex;
     flex-direction: column;
-    height: 620px;
+    height: calc(100vh - 280px);
     overflow: hidden;
   }
 
@@ -550,22 +550,22 @@ nav button.nav-ai {
   .send-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
 
   /* Sidebar */
-  .chat-sidebar { display: flex; flex-direction: column; gap: 20px; }
+   .chat-sidebar { display: flex; flex-direction: column; gap: 12px; }
 
-  .chat-info-card {
+.chat-info-card {
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: 16px;
-    padding: 24px;
+    padding: 16px;
     box-shadow: 0 2px 12px var(--shadow);
   }
 
-  .chat-info-card h4 {
+.chat-info-card h4 {
     font-family: 'DM Serif Display', serif;
     font-size: 1.05em;
     color: var(--accent);
-    margin-bottom: 14px;
-    padding-bottom: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
     border-bottom: 1px solid var(--border);
   }
 
@@ -574,7 +574,7 @@ nav button.nav-ai {
     background: var(--bg);
     border: 1px solid var(--border);
     border-radius: 10px;
-    padding: 10px 14px;
+    padding: 7px 12px;
     font-size: 0.83em;
     color: var(--text-muted);
     cursor: pointer;
@@ -644,11 +644,11 @@ nav button.nav-ai {
 <body>
 
 <header>
-  <div class="logo">NP<span>.</span></div>
+  <div class="logo" onclick="showTab('about', document.querySelector('nav button:first-child'))" style="cursor:pointer;">NP<span>.</span></div>
   <nav>
     <button class="active" onclick="showTab('about', this)">👋 About Me</button>
     <button onclick="showTab('projects', this)">🚀 Projects</button>
-    
+    <!-- <button onclick="showTab('articles', this)">✍️ Articles</button> -->
     <button class="nav-ai" onclick="showTab('chat', this)">🤖 Ask Nevzat</button>
     <button onclick="showTab('contact', this)">📞 Contact</button>
   </nav>
@@ -723,13 +723,23 @@ nav button.nav-ai {
     </div>
   </div>
 
+  <!-- ARTICLES -->
+  <div id="tab-articles" class="tab-panel">
+    <div class="section-header">
+      <h2>My <span>Articles</span></h2>
+      <p>Lessons learned building real systems — architecture, AI, and engineering decisions</p>
+    </div>
+    <div class="projects-grid" id="articles-grid"></div>
+    <div style="text-align:center;margin-top:48px;padding:40px;background:var(--card);border-radius:16px;border:1px solid var(--border);">
+      <p style="font-family:'DM Serif Display',serif;font-size:1.3em;color:var(--text);margin-bottom:8px;">More articles coming soon</p>
+      <p style="color:var(--text-muted);font-size:0.9em;margin-bottom:20px;">Follow me on LinkedIn to get notified when I publish new articles about AI, AWS, and software engineering.</p>
+      <a href="https://www.linkedin.com/in/nevzatpinar/" target="_blank" class="social-btn btn-linkedin" style="display:inline-flex;padding:14px 28px;border-radius:25px;font-size:0.95em;">
+        💼 Follow on LinkedIn
+      </a>
+    </div>
+  </div>
   <!-- CHAT -->
   <div id="tab-chat" class="tab-panel">
-    <div class="section-header">
-      <h2>Ask <span>Nevzat</span></h2>
-      <p>Chat with my AI assistant about my experience, skills, and career journey</p>
-    </div>
-
     <div class="chat-layout">
       <!-- Main chat window -->
       <div class="chat-container">
@@ -739,7 +749,7 @@ nav button.nav-ai {
             <div class="chat-header-name">Nevzat's AI Assistant</div>
             <div class="chat-header-status">
               <span class="status-dot"></span>
-              Online · Powered by GPT-4o · Hosted on AWS
+              Online · Powered by GPT-4o-mini · Hosted on AWS Lambda
             </div>
           </div>
         </div>
@@ -780,26 +790,8 @@ nav button.nav-ai {
           <div class="suggested-questions">
             <button class="suggested-q" onclick="askSuggested(this)">What technologies does Nevzat specialize in?</button>
             <button class="suggested-q" onclick="askSuggested(this)">Tell me about his AWS certifications.</button>
-            <button class="suggested-q" onclick="askSuggested(this)">What was his role at Fiserv?</button>
-            <button class="suggested-q" onclick="askSuggested(this)">What AI or ML projects has he built?</button>
+            <button class="suggested-q" onclick="askSuggested(this)">What projects has he worked on?</button>
             <button class="suggested-q" onclick="askSuggested(this)">How many years of experience does he have?</button>
-            <button class="suggested-q" onclick="askSuggested(this)">Is Nevzat open to new opportunities?</button>
-          </div>
-        </div>
-
-        <div class="chat-info-card">
-          <h4>🏷 Topics I Can Cover</h4>
-          <div class="topic-chips">
-            <span class="topic-chip">Java / Spring</span>
-            <span class="topic-chip">AWS Cloud</span>
-            <span class="topic-chip">AI & ML</span>
-            <span class="topic-chip">Full Stack</span>
-            <span class="topic-chip">Agile</span>
-            <span class="topic-chip">Security</span>
-            <span class="topic-chip">Leadership</span>
-            <span class="topic-chip">Kubernetes</span>
-            <span class="topic-chip">LLMs</span>
-            <span class="topic-chip">RAG</span>
           </div>
         </div>
 
@@ -812,11 +804,6 @@ nav button.nav-ai {
             💼 Connect on LinkedIn
           </a>
         </div>
-
-        <p class="chat-disclaimer">
-          🛠 Currently in mock mode.<br>
-          Live AI responses coming soon via AWS Lambda + API Gateway.
-        </p>
       </div>
     </div>
   </div>
@@ -824,9 +811,7 @@ nav button.nav-ai {
   <!-- CONTACT -->
   <div id="tab-contact" class="tab-panel">
     <div class="contact-wrap">
-      <h2>Get in <span style="color:var(--accent)">Touch</span></h2>
-      <p>Interested in full-stack development, AI integration, or cloud architecture? I'm always eager to share knowledge, discuss technical solutions, and explore how we can leverage technology to solve real-world problems.</p>
-      <p>Have questions? Don't hesitate to reach out!</p>
+      <p>Have a challenging problem to solve? I enjoy sharing what I learn and connecting with fellow engineers. Whether you have a question or an idea — reach out.</p>
       <div class="contact-cards">
         <a href="https://www.linkedin.com/in/nevzatpinar/" target="_blank" class="contact-card" style="background:#0077b5;border-color:#0077b5;">
           <div class="icon">💼</div>
@@ -839,16 +824,14 @@ nav button.nav-ai {
           <div class="sublabel" style="color:rgba(255,255,255,0.75);">See my code</div>
         </a>
       </div>
-      <div class="quote-block">
-        <p>Passion is the compiler that turns effort into excellence.</p>
-        <cite>— Nevzat Pinar</cite>
-      </div>
     </div>
   </div>
 
 </main>
 
-<footer>© 2026 Nevzat Pinar · Built with ❤️ · Hosted on GitHub Pages</footer>
+<footer>© 2026 Nevzat Pinar · Built with ❤️ · Hosted on GitHub Pages
+  <div style="font-family:'DM Serif Display',serif;font-style:italic;font-size:0.78em;color:var(--text-muted);opacity:0.7;">Passion is the compiler that turns effort into excellence.</div>
+</footer>
 
 <script>
   // ─── PROJECTS DATA ───────────────────────────────────────────
@@ -910,6 +893,9 @@ nav button.nav-ai {
 
     if (name === 'chat') {
       warmupLambda();
+    }
+    if (name === 'articles') {
+      renderArticles();
     }
   }
 
@@ -1036,5 +1022,6 @@ function warmupLambda() {
     sendMessage();
   }
 </script>
+<script src="articles.js"></script>
 </body>
 </html>
